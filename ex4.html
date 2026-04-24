@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback - Automação de Testes</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; background-color: #f4f4f9; }
+        form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 500px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input[type="text"], select, textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .date-container { display: flex; gap: 10px; }
+        button { background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; width: 100%; font-size: 16px; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <h2>Avaliação de Disciplina</h2>
+    <form id="form-feedback">
+        <div class="form-group">
+            <label for="input_nome">Nome Completo</label>
+            <input type="text" id="input_nome">
+        </div>
+        <div class="form-group">
+            <label for="input_ra">Registro Acadêmico (RA)</label>
+            <input type="text" id="input_ra">
+        </div>
+        <div class="form-group">
+            <label>Data de Nascimento</label>
+            <div class="date-container">
+                <input type="text" id="nasc_dia" placeholder="DD">
+                <input type="text" id="nasc_mes" placeholder="MM">
+                <input type="text" id="nasc_ano" placeholder="AAAA">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="select_curso">Curso</label>
+            <select id="select_curso">
+                <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+                <option value="si">Sistemas de Informação</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="select_nota">Nota de Aproveitamento</label>
+            <select id="select_nota">
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="txt_sugestoes">Sugestões</label>
+            <textarea id="txt_sugestoes" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="txt_obs">Observações</label>
+            <textarea id="txt_obs" rows="2"></textarea>
+        </div>
+        <button type="button" id="btn_enviar">Confirmar Envio</button>
+    </form>
+</body>
+</html>
